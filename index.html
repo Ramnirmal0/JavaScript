@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Demo Application</title>
+    <style>
+
+
+    </style>
+
+    <script>
+      var string="aaaadffqqq";
+      var arr=[];
+      var count1=[];
+      var output=[];
+      for ( i=0 ; i<string.length;i++){
+        var x= string.slice(i,i+1);
+        arr.push(x);
+
+      }
+      var count=0;
+      for (i=0;i<string.length;i++)
+      {
+        for (j=0;j<string.length;j++){
+          if(arr[i]==arr[j])
+          {
+            count= count+1;
+
+          }
+          else{
+
+            //console.log(count);
+            count1.push(count);
+            count=0;
+
+          }
+
+        }
+
+
+      }
+      //console.log(count1);
+      var uniq=[...new Set(count1)] ;
+      //console.log(uniq);
+      var filtervalue=0;
+      uniq=uniq.filter(function(value){
+        return value!== filtervalue;
+      })
+            //console.log(uniq);
+
+      filterstring=[...new Set(arr)];
+            //console.log(filterstring);
+
+            for ( i=0 ; i<uniq.length;i++){
+              console.log(uniq[i]+" \t "+filterstring[i]);
+              output.push(uniq)
+
+            }
+
+
+
+
+//“4a1d2f3q”
+
+
+    </script>
+
+
+  </head>
+  <body>
+
+  </body>
+</html>

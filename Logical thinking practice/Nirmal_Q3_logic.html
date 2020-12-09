@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nirmal Q3 Logic</title>
+<script>
+  var count=0;
+  var flag=false;
+  var array=[1, 1, 2, 2, 1];
+  //var array=[1, 1, 2, 2, 2,1,1,1];
+  //var array=[3, 4, 2, 2, 2, 7];
+  for(x in array){
+    checker(array[x],array[++x]);
+  }
+  if(flag == false){
+    console.log("Contain No Tripplet in array ");
+  }
+
+  function checker(x,y)
+  {
+
+    if(x==y){
+
+      count=count+1;
+
+    }
+    else{
+      count=0;
+    }
+    if(count==2){
+      flag=true;
+      console.log("Contain 1 Tripplet in array for value :"+ x );
+      count=0;
+    }
+  }
+
+
+
+
+</script>
+
+  </head>
+  <body>
+
+  </body>
+</html>

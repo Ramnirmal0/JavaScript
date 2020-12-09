@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nirmal Q1 Logic</title>
+    <script>
+      var a="ssssdffqqqq";
+      var b="sqssdffqqqs";
+      var result=[];
+      var array=[...a];
+      var sorted=[...new Set(array)];
+      for (x in sorted){
+        counter(array,sorted[x])
+      }
+      function counter(array,x){
+        var count=0;
+        for (i in array){
+          if(array[i]==x){
+            count=count+1;
+          }
+        }
+        result.push(count);
+        result.push(x);
+      }
+      var output=result.toString();
+      console.log(output);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
